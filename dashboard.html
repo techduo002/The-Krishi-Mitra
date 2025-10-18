@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KrishiMitra | Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <button class="toggle-btn" id="toggleSidebar">
+       <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="user-info">
+        <i data-feather="user"></i>
+        <span id="userName">Hello, Farmer!</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button onclick="location.href='rogi-scan.html'">
+          <i class="fa-solid fa-virus"></i><span>Rogi Scan</span>
+        </button>
+        <button onclick="location.href='kisan-sathi.html'">
+          <i class="fa-solid fa-comments"></i><span>Kisan Sathi</span>
+        </button>
+        <button onclick="location.href='beej-setu.html'">
+          <i class="fa-solid fa-seedling"></i><span>Beej Setu</span>
+        </button>
+        <button onclick="location.href='anaaj-bazaar.html'">
+          <i class="fa-solid fa-store"></i><span>Anaaj Bazaar</span>
+        </button>
+        <button onclick="location.href='yantra-mitra.html'">
+          <i class="fa-solid fa-tractor"></i><span>Yantra Mitra</span>
+        </button>
+      </nav>
+
+      <button class="logout-btn" id="logoutBtn">
+        <i data-feather="log-out"></i><span>Logout</span>
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Our Core Features</h1>
+        <p>Explore the tools that make farming smarter, easier, and more profitable.</p>
+      </header>
+
+      <section class="features-grid">
+        <div class="feature-card">
+          <i class="fa-solid fa-virus"></i>
+          <h3>Rogi Scan</h3>
+          <p>Upload an image of your crop, and our AI identifies diseases and recommends treatments instantly.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Kisan Sathi</h3>
+          <p>An AI chatbot that answers your farming questions in Hindi or English — 24/7 support for every farmer.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Beej Setu</h3>
+          <p>Get smart crop recommendations based on soil, weather, and location — for maximum yield.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fa-solid fa-store"></i>
+          <h3>Anaaj Bazaar</h3>
+          <p>Compare real-time crop prices, sell fairly, and make informed market decisions easily.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-tractor"></i>
+          <h3>Yantra Mitra</h3>
+          <p>Rent modern tractors, harvesters, and equipment nearby at affordable prices.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>
