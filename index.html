@@ -113,6 +113,37 @@
     </div>
   </section>
 
+    <!-- Contact / Footer Section -->
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question, feedback, or partnership idea? We’d love to hear from you!</p>
+
+    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <input type="hidden" name="form-name" value="contact">
+
+      <p>
+        <label><i data-feather="user"></i> Name<br>
+          <input type="text" name="name" required placeholder="Enter your name">
+        </label>
+      </p>
+
+      <p>
+        <label><i data-feather="mail"></i> Email<br>
+          <input type="email" name="email" required placeholder="Enter your email">
+        </label>
+      </p>
+
+      <p>
+        <label><i data-feather="message-square"></i> Message<br>
+          <textarea name="message" rows="5" required placeholder="Your message..."></textarea>
+        </label>
+      </p>
+
+      <p>
+        <button type="submit">Send Message</button>
+      </p>
+    </form>
+
   <!-- Footer -->
   <footer id="contact">
     <p>&copy; 2025 KrishiMitra | All Rights Reserved.</p>
@@ -122,3 +153,4 @@
   <script>feather.replace();</script>
 </body>
 </html>
+
