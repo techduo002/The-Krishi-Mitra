@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KrishiMitra | Signup</title>
+  <link rel="stylesheet" href="signup.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="signup-container">
+
+    <!-- Left Panel (Form) -->
+    <div class="left-panel">
+      <div class="form-box">
+        <h2>Create Account</h2>
+        <p class="subtitle">Start your KrishiMitra journey</p>
+
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+
+          <input type="text" id="fullname" placeholder="Full Name" required />
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" placeholder="Email Address" required />
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" required />
+        </div>
+<div class="input-group role-dropdown">
+  <i class="fa-solid fa-user-tag"></i>
+  <div class="selected">Select Role</div>
+  <ul class="options">
+    <li data-value="farmer"><i class="fa-solid fa-seedling"></i> Farmer</li>
+    <li data-value="expert"><i class="fa-solid fa-sun"></i> Expert</li>
+    <li data-value="Wholeseller"><i class="fa-solid fa-truck"></i> Wholeseller</li>
+  </ul>
+</div>
+
+
+        <button onclick="signUpUser()">Sign Up</button>
+
+        <p class="login-text">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </div>
+    </div>
+
+ 
+      <div class="right-panel">
+      <div class="overlay">
+        <h1>Join <span>KrishiMitra</span></h1>
+        <p>Your trusted companion for smart and sustainable farming.</p>
+
+        <div class="features">
+          <div><i class="fa-solid fa-seedling"></i> Smart Crop Suggestions</div>
+          <div><i class="fa-solid fa-cloud-sun"></i> Weather-based Insights</div>
+          <div><i class="fa-solid fa-store"></i> Anaaj Bazaar Access</div>
+        </div>
+      </div>
+    </div>
+
+  <script src="signup.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
