@@ -302,11 +302,52 @@
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden">
 
-    
+    <!-- Sidebar from Original -->
+    <aside id="sidebar" class="sidebar" aria-label="Sidebar Navigation">
+        <div class="sidebar-header">
+            <h3 data-translate="settings">Settings</h3>
+            <button id="toggle-sidebar" class="sidebar-toggle" aria-label="Close Sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item" tabindex="0">
+                    <i class="fas fa-globe"></i>
+                    <span data-translate="language">Language</span>
+                    <div class="sidebar-subcontent">
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="hi">Hindi</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="sidebar-item" tabindex="0">
+                    <i class="fas fa-moon"></i>
+                    <span data-translate="theme">Theme</span>
+                    <div class="sidebar-subcontent">
+                        <button id="theme-toggle" data-translate="dark_mode">Dark Mode</button>
+                    </div>
+                </li>
+                <li class="sidebar-item" tabindex="0">
+                    <i class="fas fa-user"></i>
+                    <span data-translate="profile">Profile</span>
+                    <div class="sidebar-subcontent">
+                        <button onclick="location.href='login.html'" data-translate="login_profile">Login / Profile</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Sidebar toggle -->
+    <button id="open-sidebar" class="open-sidebar-btn" aria-label="Open Sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 transform" id="navbar">
-        <div class="container mx-auto px-6 py-2">
+        <div class="container mx-auto px-6 py-4">
             <div class="glass rounded-2xl px-6 py-3 shadow-lg">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center space-x-3">
@@ -406,7 +447,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-32 px-6 relative bg-gray-50 leaf-pattern">
+    <section id="features" class="py-24 px-6 relative bg-gray-50 leaf-pattern">
         <div class="container mx-auto">
             <div class="text-center mb-20">
                 <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-farm-green-700 mb-6">
@@ -751,7 +792,18 @@
     </footer>
 
     <script>
-        
+        // Sidebar Toggle
+        const openSidebarBtn = document.getElementById('open-sidebar');
+        const toggleSidebarBtn = document.getElementById('toggle-sidebar');
+        const sidebar = document.getElementById('sidebar');
+
+        openSidebarBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+        });
+
+        toggleSidebarBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
 
         // Mobile Menu Toggle
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
@@ -851,7 +903,5 @@
     <script src='https://www.noupe.com/embed/0199faada1827522bf0e33d4ea5d7c76153c.js'></script>
 </body>
 </html>
-
-
 
 
