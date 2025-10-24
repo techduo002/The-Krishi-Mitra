@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YantraMitra | KrishiMitra/title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'farm-green': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'morph': 'morph 8s ease-in-out infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="yantra-mitra.css" />
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden font-inter">
+
+
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="glass rounded-2xl px-6 py-3 shadow-lg">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-white to-gray-100 flex items-center justify-center shadow-lg">
+                            <img src="logo.png" alt="KrishiMitra Logo" class="w-8 h-8">
+                        </div>
+                        <span class="text-2xl font-bold font-poppins text-gradient">KrishiMitra</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-farm-green-800 font-medium hover:text-farm-green-600 transition-all duration-300">Home</a>
+                        <a href="#equipment" class="nav-link px-4 py-2 rounded-lg text-farm-green-800 font-medium hover:text-farm-green-600 transition-all duration-300">Equipment</a>
+                        <a href="#how-it-works" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-farm-green-600 transition-all duration-300">How It Works</a>
+                        <a href="#contact" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-farm-green-600 transition-all duration-300">Contact</a>
+                       
+                    </div>
+                    <button id="mobile-menu-toggle" class="md:hidden text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden glass min-h-screen flex flex-col justify-center items-center space-y-8">
+        <a href="index.html" class="text-2xl font-semibold text-farm-green-800 hover:text-farm-green-600 transition-colors">Home</a>
+        <a href="#equipment" class="text-2xl font-semibold text-gray-600 hover:text-farm-green-600 transition-colors">Equipment</a>
+        <a href="#how-it-works" class="text-2xl font-semibold text-gray-600 hover:text-farm-green-600 transition-colors">How It Works</a>
+        <a href="#contact" class="text-2xl font-semibold text-gray-600 hover:text-farm-green-600 transition-colors">Contact</a>
+
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
+        <div class="floating-elements">
+            <div class="floating-shape w-64 h-64 morphing-blob"></div>
+            <div class="floating-shape w-48 h-48 morphing-blob"></div>
+            <div class="floating-shape w-32 h-32 morphing-blob"></div>
+        </div>
+        <div class="container mx-auto px-6 pt-24 pb-16 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8 animate-slide-up">
+                    <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-farm-green-700">
+                        <span class="w-2 h-2 bg-farm-green-500 rounded-full mr-2 animate-pulse"></span>
+                        Equipment Rentals
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold font-poppins leading-tight">
+                        <span class="text-gray-800">Rent or Lend</span><br>
+                        <span class="text-gradient">Farming Equipment</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
+                        Post your equipment for rent as an owner, or raise a request as a farmer. Listings and requests are stored securely and update in real time.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button id="showOfferBtn" class="group hover-lift green-gradient px-8 py-4 rounded-xl font-bold text-lg text-white shadow-xl hover:shadow-farm-green-500/25 transition-all duration-300 flex items-center justify-center">
+                            <i class="fas fa-tools mr-3 text-2xl group-hover:scale-110 transition-transform"></i>
+                            Offer Equipment
+                        </button>
+                        <button id="showRequestBtn" class="group glass px-8 py-4 rounded-xl font-bold text-lg text-gray-700 hover:bg-white/80 transition-all duration-300 flex items-center justify-center border border-farm-green-200">
+                            <i class="fas fa-hand-holding mr-3 text-2xl group-hover:scale-110 transition-transform text-farm-green-600"></i>
+                            Request Equipment
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="farmer.jpg" alt="Farmer Illustration" class="hero-illustration rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-r from-farm-green-200/30 to-farm-green-300/30 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
+            <div class="w-6 h-10 border-2 border-farm-green-500 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-farm-green-500 rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section class="py-24 px-6 bg-gray-50 leaf-pattern">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Offer Equipment -->
+                <div id="offerSection" class="glass rounded-2xl p-8 card-hover border border-farm-green-100 animate-slide-up">
+                    <h3 class="text-2xl font-bold font-poppins mb-6 text-gray-800">Offer Equipment for Rent</h3>
+                    <form id="rentalForm" autocomplete="off" class="space-y-6">
+                        <div>
+                            <label for="owner_name" class="block text-sm font-medium text-gray-600">Owner Name</label>
+                            <input id="owner_name" name="owner_name" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                        </div>
+                        <div>
+                            <label for="equipment_name" class="block text-sm font-medium text-gray-600">Equipment Name</label>
+                            <input id="equipment_name" name="equipment_name" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="price_per_day" class="block text-sm font-medium text-gray-600">Price (₹ per day)</label>
+                                <input id="price_per_day" name="price_per_day" type="number" min="0" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                            <div>
+                                <label for="location" class="block text-sm font-medium text-gray-600">Location (city/village)</label>
+                                <input id="location" name="location" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact_number" class="block text-sm font-medium text-gray-600">Contact Number</label>
+                                <input id="contact_number" name="contact_number" type="tel" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                            <div>
+                                <label for="image_url" class="block text-sm font-medium text-gray-600">Image URL (optional)</label>
+                                <input id="image_url" name="image_url" placeholder="https://..." class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                        </div>
+                        <div class="flex justify-end gap-4">
+                            <button type="submit" class="green-gradient px-6 py-3 rounded-lg font-bold text-white shadow-lg hover:shadow-farm-green-500/25 transition-all">Post Listing</button>
+                            <button type="reset" class="glass px-6 py-3 rounded-lg font-bold text-gray-700 hover:bg-white/80 border border-farm-green-200">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Request Equipment -->
+                <div id="requestSection" class="glass rounded-2xl p-8 card-hover border border-farm-green-100 hidden animate-slide-up">
+                    <h3 class="text-2xl font-bold font-poppins mb-6 text-gray-800">Request Equipment</h3>
+                    <form id="requestForm" autocomplete="off" class="space-y-6">
+                        <div>
+                            <label for="farmer_name" class="block text-sm font-medium text-gray-600">Farmer Name</label>
+                            <input id="farmer_name" name="farmer_name" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                        </div>
+                        <div>
+                            <label for="requested_equipment" class="block text-sm font-medium text-gray-600">Requested Equipment</label>
+                            <input id="requested_equipment" name="requested_equipment" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="duration_days" class="block text-sm font-medium text-gray-600">Duration (days)</label>
+                                <input id="duration_days" name="duration_days" type="number" min="1" class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                            <div>
+                                <label for="req_location" class="block text-sm font-medium text-gray-600">Location</label>
+                                <input id="req_location" name="req_location" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="req_contact" class="block text-sm font-medium text-gray-600">Contact Number</label>
+                                <input id="req_contact" name="req_contact" type="tel" required class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                            <div>
+                                <label for="notes" class="block text-sm font-medium text-gray-600">Notes (optional)</label>
+                                <input id="notes" name="notes" placeholder="Any details" class="w-full px-4 py-3 bg-white/10 rounded-lg text-gray-800 border border-farm-green-200 focus:border-farm-green-400 outline-none" />
+                            </div>
+                        </div>
+                        <div class="flex justify-end gap-4">
+                            <button type="submit" class="green-gradient px-6 py-3 rounded-lg font-bold text-white shadow-lg hover:shadow-farm-green-500/25 transition-all">Submit Request</button>
+                            <button type="reset" class="glass px-6 py-3 rounded-lg font-bold text-gray-700 hover:bg-white/80 border border-farm-green-200">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings & Requests Section -->
+    <section id="equipment" class="py-24 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-farm-green-700 mb-6">
+                    <span class="w-2 h-2 bg-farm-green-500 rounded-full mr-2 animate-pulse"></span>
+                    Equipment Marketplace
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold font-poppins mb-6">
+                    <span class="text-gradient">Browse Available</span><br>
+                    <span class="text-gray-800">Equipment & Requests</span>
+                </h2>
+            </div>
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold font-poppins mb-6 text-gray-800">Available Equipment</h3>
+                <div id="listingContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </div>
+            <div class="section-divider"></div>
+            <div>
+                <h3 class="text-2xl font-bold font-poppins mb-6 text-gray-800">Equipment Requests</h3>
+                <div id="requestContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 px-6 bg-gray-50 leaf-pattern">
+        <div class="container mx-auto">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-farm-green-700 mb-6">
+                    <span class="w-2 h-2 bg-farm-green-500 rounded-full mr-2 animate-pulse"></span>
+                    How It Works
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-bold font-poppins mb-6">
+                    <span class="text-gradient">Simple Steps</span><br>
+                    <span class="text-gray-800">to Rent or Lend</span>
+                </h2>
+            </div>
+            <ol class="space-y-4 text-gray-600 max-w-2xl mx-auto">
+                <li class="flex items-start">
+                    <span class="w-8 h-8 bg-farm-green-500 text-white rounded-full flex items-center justify-center mr-4 font-bold">1</span>
+                    <span>Owners post their equipment with price and contact.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="w-8 h-8 bg-farm-green-500 text-white rounded-full flex items-center justify-center mr-4 font-bold">2</span>
+                    <span>Farmers browse listings or post a request.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="w-8 h-8 bg-farm-green-500 text-white rounded-full flex items-center justify-center mr-4 font-bold">3</span>
+                    <span>Contact owner or farmer via the provided number to finalize details.</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative overflow-hidden green-gradient">
+        <div class="container mx-auto relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl lg:text-6xl font-bold font-poppins mb-8 text-white">
+                    <span class="text-yellow-300">Get in Touch</span><br>
+                    We're Here to Help
+                </h2>
+                <p class="text-xl lg:text-2xl text-white/90 mb-12 leading-relaxed">
+                    Have questions? Our team is ready to assist you with any farming or app-related queries.
+                </p>
+                <form id="contactForm" class="glass-green rounded-2xl p-8 max-w-2xl mx-auto border border-white/20">
+                    <div class="space-y-6">
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 bg-white/10 rounded-lg text-white placeholder-white/70 border border-white/20 focus:border-white/40 outline-none" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 bg-white/10 rounded-lg text-white placeholder-white/70 border border-white/20 focus:border-white/40 outline-none" required>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message..." class="w-full px-4 py-3 bg-white/10 rounded-lg text-white placeholder-white/70 border border-white/20 focus:border-white/40 outline-none" required></textarea>
+                        <button type="submit" class="w-full green-gradient text-white font-bold py-4 rounded-xl hover:shadow-lg transition-all">Send Message</button>
+                        <p id="responseMsg" class="text-lg mt-4 text-white/90"></p>
+                    </div>
+                </form>
+                <div class="mt-12 flex flex-wrap justify-center gap-8">
+                    <div class="flex items-center text-white/90">
+                        <i class="fas fa-phone text-yellow-300 mr-2"></i>
+                        <span>+91 89492 06491</span>
+                    </div>
+                    <div class="flex items-center text-white/90">
+                        <i class="fas fa-envelope text-yellow-300 mr-2"></i>
+                        <span>support@krishimitra.com</span>
+                    </div>
+                    <div class="flex items-center text-white/90">
+                        <i class="fab fa-whatsapp text-yellow-300 mr-2"></i>
+                        <span>WhatsApp Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-16 px-6 relative">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-white to-gray-100 flex items-center justify-center shadow-lg mr-4">
+                            <img src="logo.png" alt="KrishiMitra Logo" class="w-10 h-10">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold font-poppins text-gradient">KrishiMitra</h3>
+                            <p class="text-gray-400">Empowering Farmers with AI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
+                        From crop insights to equipment rentals, we're making farming smarter and more profitable.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-farm-green-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-farm-green-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-farm-green-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#equipment" class="text-gray-400 hover:text-white transition-colors">Equipment</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>FAQ</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                        <li>Help Center</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-16 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                        &copy; 2025 KrishiMitra | All Rights Reserved.
+                    </p>
+                    <div class="flex items-center space-x-6 text-sm text-gray-400">
+                        <span class="flex items-center">
+                            <i class="fas fa-shield-alt text-farm-green-400 mr-2"></i>
+                            Secured by SSL
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script>
+        const SUPABASE_URL = "https://kghafvoigkbcnpsikeow.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtnaGFmdm9pZ2tiY25wc2lrZW93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA0ODI4OTIsImV4cCI6MjA3NjA1ODg5Mn0.F-b888j82DAx-IIkQacyQnJS1eBXnZdYVL8y_AI50DI";
+        const supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        console.log("✅ Supabase initialized:", supabase);
+    </script>
+
+    <!-- App Script -->
+    <script src="yantra-mitra.js"></script>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') mobileMenu.classList.add('hidden');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.querySelector('.glass').style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.querySelector('.glass').style.background = 'rgba(255, 255, 255, 0.85)';
+            }
+        });
+
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.card-hover').forEach(card => observer.observe(card));
+
+        // Parallax Effect for Floating Shapes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.floating-shape');
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.3;
+                shape.style.transform = translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg);
+            });
+        });
+    </script>
+</body>
+</html>

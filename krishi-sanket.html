@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishi Sanket | KrishiMitra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="krishi-sanket.css">
+
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden font-inter">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="glass rounded-2xl px-6 py-3 shadow-lg">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-white to-gray-100 flex items-center justify-center shadow-lg">
+                            <img src="logo.png" alt="KrishiMitra Logo" class="w-8 h-8">
+                        </div>
+                        <span class="text-2xl font-bold font-poppins text-gradient">KrishiMitra</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-farm-green-800 font-medium hover:text-farm-green-600 transition-all duration-300">Home</a>
+                        <a href="#about" class="nav-link px-4 py-2 rounded-lg text-farm-green-800 font-medium hover:text-farm-green-600 transition-all duration-300">About</a>
+                        <a href="#how-it-works" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-farm-green-600 transition-all duration-300">How It Works</a>
+                        <a href="#contact" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-farm-green-600 transition-all duration-300">Contact</a>
+                       
+                    </div>
+                    <button id="mobile-menu-toggle" class="md:hidden text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden glass min-h-screen flex flex-col justify-center items-center space-y-8">
+        <a href="index.html" class="text-2xl font-semibold text-farm-green-800 hover:text-farm-green-600 transition-colors">Home</a>
+        <a href="#about" class="text-2xl font-semibold text-gray-600 hover:text-farm-green-600 transition-colors">About</a>
+        <a href="#how-it-works" class="text-2xl font-semibold text-gray-600 hover:text-farm-green-600 transition-colors">How It Works</a>
+        <a href="#contact" class="text-2xl font-semibold text-gray-600 hover:text-farm-green-600 transition-colors">Contact</a>
+
+    </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center gradient-bg">
+    <div class="container mx-auto px-6 pt-24 pb-16 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8 fade-in">
+          <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-green-700">
+            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+            AI Farming Assistant
+          </div>
+          <h1 class="text-5xl lg:text-6xl font-bold font-poppins leading-tight">
+            <span class="text-gray-800">Smart insights for</span><br>
+            <span class="text-gradient">Smarter Farming</span>
+          </h1>
+          <p class="text-xl text-gray-600 max-w-xl">
+            Get real-time weather forecasts, soil condition updates, and climate-based recommendations to make informed farming decisions.
+          </p>
+          <a href="#krishi-sanket" class="green-gradient px-8 py-4 rounded-xl font-bold text-lg text-white shadow-xl hover:opacity-90 transition-all inline-block">Check Insights <i class="fas fa-sun"></i></a>
+        </div>
+                        <div class="relative">
+                    <img src="farmer.jpg" alt="Farmer Illustration" class="hero-illustration rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-r from-farm-green-200/30 to-farm-green-300/30 rounded-full blur-3xl -z-10"></div>
+                </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-24 px-6 bg-gray-50 fade-in">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-green-700 mb-6">
+          <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+          Krishi Sanket Features
+        </div>
+        <h2 class="text-4xl lg:text-6xl font-bold font-poppins mb-6">
+          <span class="text-gradient">What Can You Do?</span>
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">Use Krishi Sanket for:</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass p-8 rounded-xl card-hover">
+          <i class="fas fa-cloud-sun text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Weather Forecasts</h3>
+          <p class="text-gray-700">Get accurate, real-time weather predictions for your region to plan farming activities effectively.</p>
+        </div>
+        <div class="glass p-8 rounded-xl card-hover">
+          <i class="fas fa-comment text-green-600 text-4xl mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">AI Based Recommendations</h3>
+          <p class="text-gray-700">Get recommendations based on your crops and guide your farming decisions with real-time weather and soil insights.</p>
+        </div>
+              </div>
+    </div>
+  </section>
+
+  
+<section id="krishi-sanket" class="py-24 px-6 fade-in">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-green-700 mb-6">
+        <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+        Your Smart Advisor
+      </div>
+      <h2 class="text-4xl lg:text-6xl font-bold font-poppins mb-6">
+        <span class="text-gradient">Krishi Sanket</span>
+      </h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">Real-time weather, crop advice, and daily tips.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <div class="glass rounded-2xl shadow-xl p-6 flex flex-col justify-between items-center text-center border-t-4 border-green-500 fade-in" id="weatherCard">
+          <i class="fas fa-cloud-sun text-green-600 text-5xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-3 text-farm-green-800">Today's Weather</h3>
+          <div class="space-y-2 text-lg w-full">
+              <p class="text-gray-700"><i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Location: <span id="location" class="font-semibold">Loading...</span></p>
+              <p class="text-gray-700"><i class="fas fa-thermometer-half text-orange-500 mr-2"></i> Temp: <span id="temperature" class="font-bold">--</span>°C</p>
+              <p class="text-gray-700"><i class="fas fa-tint text-blue-500 mr-2"></i> Condition: <span id="condition" class="font-semibold">--</span></p>
+              <p class="text-gray-700"><i class="fas fa-cloud-showers-heavy text-cyan-500 mr-2"></i> Rain Chance: <span id="rainfall" class="font-semibold">--</span>%</p>
+              <p class="mt-4"><i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i> Alerts: <span id="alerts" class="font-medium text-green-600">No alerts</span></p>
+          </div>
+          <button onclick="getWeather()" class="green-gradient text-white px-6 py-2 rounded-xl font-semibold mt-6 hover:opacity-90 transition w-full">
+              <i class="fas fa-sync-alt"></i> Refresh Weather
+          </button>
+      </div>
+
+      <div class="glass rounded-2xl shadow-xl p-6 flex flex-col border-t-4 border-blue-500 fade-in" id="cropCard">
+          <i class="fas fa-seedling text-blue-600 text-5xl mb-4 self-center"></i>
+          <h3 class="text-2xl font-bold mb-4 text-farm-green-800 text-center">AI Crop Advisor</h3>
+          <div class="flex">
+            <input id="cropName" placeholder="Enter your crop name" class="flex-1 border border-blue-300 rounded-l-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
+            <button onclick="getCropAdvice()" class="green-gradient text-white px-4 rounded-r-xl font-semibold hover:opacity-90 transition">
+              <i class="fas fa-list-ul"></i>
+            </button>
+          </div>
+          <div id="adviceText" class="mt-4 p-4 text-gray-700 bg-white/50 rounded-lg shadow-inner border border-gray-200">
+            Enter your crop to get expert advice on planting, water, and care.
+          </div>
+      </div>
+
+      <div class="glass rounded-2xl shadow-xl p-6 flex flex-col justify-between items-center text-center border-t-4 border-yellow-500 fade-in" id="tipCard">
+          <i class="fas fa-lightbulb text-yellow-600 text-5xl mb-4"></i>
+          <h3 class="text-2xl font-bold mb-4 text-farm-green-800">Daily Farming Tip</h3>
+          <div class="flex-1 flex items-center justify-center">
+            <p id="tipText" class="text-xl font-medium text-gray-700 italic">Loading tip...</p>
+          </div>
+          <button onclick="newTip()" class="bg-yellow-500 text-white px-6 py-2 rounded-xl font-semibold mt-6 hover:bg-yellow-600 transition w-full">
+              <i class="fas fa-redo"></i> New Tip
+          </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section id="how-it-works" class="py-24 px-6 bg-gray-50 fade-in">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center px-4 py-2 glass-green rounded-full text-sm font-medium text-green-700 mb-6">
+          <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+          How It Works
+        </div>
+        <h2 class="text-4xl lg:text-6xl font-bold font-poppins mb-6">
+          <span class="text-gradient">Simple Steps</span><br>
+          <span class="text-gray-800">to Get Smart Insights</span>
+        </h2>
+      </div>
+      <ol class="space-y-4 text-gray-700 max-w-2xl mx-auto">
+        <li class="flex items-start">
+          <span class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center mr-4 font-bold">1</span>
+          <span>Enter your location to get real-time weather and soil updates.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center mr-4 font-bold">2</span>
+          <span>Select or enter your crop to receive personalized recommendations.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center mr-4 font-bold">3</span>
+          <span>Use the insights to plan irrigation, fertilization, and planting with confidence.</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative overflow-hidden green-gradient">
+        <div class="container mx-auto relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl lg:text-6xl font-bold font-poppins mb-8 text-white">
+                    <span class="text-yellow-300">Get in Touch</span><br>
+                    We're Here to Help
+                </h2>
+                <p class="text-xl lg:text-2xl text-white/90 mb-12 leading-relaxed">
+                    Have questions? Our team is ready to assist you with any farming or app-related queries.
+                </p>
+                <form id="contactForm" class="glass-green rounded-2xl p-8 max-w-2xl mx-auto border border-white/20">
+                    <div class="space-y-6">
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 bg-white/10 rounded-lg text-white placeholder-white/70 border border-white/20 focus:border-white/40 outline-none" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 bg-white/10 rounded-lg text-white placeholder-white/70 border border-white/20 focus:border-white/40 outline-none" required>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message..." class="w-full px-4 py-3 bg-white/10 rounded-lg text-white placeholder-white/70 border border-white/20 focus:border-white/40 outline-none" required></textarea>
+                        <button type="submit" class="w-full green-gradient text-white font-bold py-4 rounded-xl hover:shadow-lg transition-all">Send Message</button>
+                        <p id="responseMsg" class="text-lg mt-4 text-white/90"></p>
+                    </div>
+                </form>
+                <div class="mt-12 flex flex-wrap justify-center gap-8">
+                    <div class="flex items-center text-white/90">
+                        <i class="fas fa-phone text-yellow-300 mr-2"></i>
+                        <span>+91 89492 06491</span>
+                    </div>
+                    <div class="flex items-center text-white/90">
+                        <i class="fas fa-envelope text-yellow-300 mr-2"></i>
+                        <span>support@krishimitra.com</span>
+                    </div>
+                    <div class="flex items-center text-white/90">
+                        <i class="fab fa-whatsapp text-yellow-300 mr-2"></i>
+                        <span>WhatsApp Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-16 px-6 relative">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-r from-white to-gray-100 flex items-center justify-center shadow-lg mr-4">
+                            <img src="logo.png" alt="KrishiMitra Logo" class="w-10 h-10">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold font-poppins text-gradient">KrishiMitra</h3>
+                            <p class="text-gray-400">Empowering Farmers with AI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
+                        From crop insights to equipment rentals, we're making farming smarter and more profitable.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-farm-green-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-farm-green-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-farm-green-600 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#equipment" class="text-gray-400 hover:text-white transition-colors">Equipment</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>FAQ</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                        <li>Help Center</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-16 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                        &copy; 2025 KrishiMitra | All Rights Reserved.
+                    </p>
+                    <div class="flex items-center space-x-6 text-sm text-gray-400">
+                        <span class="flex items-center">
+                            <i class="fas fa-shield-alt text-farm-green-400 mr-2"></i>
+                            Secured by SSL
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <!-- JS FOR NAV AND CHAT -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') mobileMenu.classList.add('hidden');
+    });
+          // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background change on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.querySelector('.glass').style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.querySelector('.glass').style.background = 'rgba(255, 255, 255, 0.85)';
+            }
+        });
+
+    // Fade-in observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    });
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+   // --- FARMING ASSISTANT LOGIC ---
+
+    // **IMPORTANT: Your API Keys**
+    const WEATHER_KEY = "1c50e54a8864488988f154907251710"; // WeatherAPI
+    const OPENROUTER_KEY = "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"; // OpenRouter AI
+
+    // 🌤 Weather
+    async function getWeather() {
+      const loc=document.getElementById("location"),
+            temp=document.getElementById("temperature"),
+            cond=document.getElementById("condition"),
+            rain=document.getElementById("rainfall"),
+            alertEl=document.getElementById("alerts");
+      
+      loc.textContent="Fetching location...";
+      temp.textContent="--";
+      cond.textContent="--";
+      rain.textContent="--";
+      alertEl.textContent="Checking alerts...";
+      alertEl.style.color="inherit"; 
+
+      try {
+        if (!navigator.geolocation) {
+          loc.textContent = "Geolocation not supported.";
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(async pos=>{
+          loc.textContent = "Fetching weather...";
+          const res=await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_KEY}&q=${pos.coords.latitude},${pos.coords.longitude}&days=1&alerts=yes`);
+          if (!res.ok) throw new Error("Weather API failed.");
+          const data=await res.json();
+          
+          loc.textContent=`${data.location.name}, ${data.location.region}`;
+          temp.textContent=data.current.temp_c;
+          cond.textContent=data.current.condition.text;
+          rain.textContent=data.forecast.forecastday[0].day.daily_chance_of_rain;
+          
+          if(data.alerts?.alert?.length>0){
+            alertEl.textContent=data.alerts.alert[0].headline; 
+            alertEl.style.color="red";
+          } else{
+            alertEl.textContent="No alerts"; 
+            alertEl.style.color="#4CAF50"; 
+          }
+        }, (error) => {
+          loc.textContent = "Location access denied.";
+          console.error("Geolocation Error:", error);
+        }, { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 });
+
+      } catch(e){
+        loc.textContent="Error loading weather.";
+        console.error("Weather Error:", e);
+      }
+    }
+
+    // 🌱 Farming Tips
+    const tips=["🌱 Test your soil every season for optimal fertilization.","💧 Use drip irrigation or a sprinkler system to conserve water.","🌾 Rotate crops annually to prevent nutrient depletion and control pests.","🐛 Check the undersides of leaves weekly to catch pests early.","🌿 Use neem spray or other organic controls for safe pest management."];
+    function newTip(){
+      document.getElementById("tipText").textContent=tips[Math.floor(Math.random()*tips.length)];
+    }
+
+    // 🌾 Crop Advisor
+    async function getCropAdvice(){
+      const crop=document.getElementById("cropName").value.trim();
+      if(!crop) {
+        document.getElementById("adviceText").innerHTML = 'Please enter a crop name, for example: **"Rice"** or **"Wheat"**.';
+        return;
+      }
+      const adviceEl=document.getElementById("adviceText");
+      adviceEl.innerHTML='<i class="fas fa-spinner fa-spin text-green-500 mr-2"></i> Generating advice for ' + crop + '...';
+      
+      try {
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${OPENROUTER_KEY}`,
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://thekrishimitra.vercel.app",
+            "X-Title": "AI Crop Advisor"
+          },
+          body: JSON.stringify({
+            model: "openai/gpt-3.5-turbo",
+            messages: [
+              { role:"system", content:`You are an expert Indian agricultural advisor. Give advice for the specific crop requested in short practical points (4-6 max), each point one sentence. Do not use paragraphs or a greeting. Start directly with the first tip. Use '-' before each tip.` },
+              { role:"user", content:`Crop: ${crop}` }
+            ]
+          })
+        });
+        
+        const data=await response.json();
+        const text=data?.choices?.[0]?.message?.content || "No advice received. Try again later.";
+
+        // Convert AI response into a styled bullet list
+        const lines = text.split(/-\s+/).filter(line => line.trim() !== "");
+        const htmlList = lines.map(line => `<li class="mb-1">${line.trim()}</li>`).join("");
+        adviceEl.innerHTML = `<ul class="list-disc pl-5 text-left text-sm space-y-2">${htmlList}</ul>`;
+
+      } catch(e){
+        adviceEl.innerHTML="⚠️ **Error fetching advice.** The API might be unreachable. Please check your network or try again.";
+        console.error(e);
+      }
+    }
+
+    // 🔄 Initialization Logic
+    // Make sure to add the new functions to your existing window.onload/DOM initialization logic
+    document.addEventListener('DOMContentLoaded', function() {
+        // ... (keep your existing mobile menu and smooth scrolling logic here)
+        
+        // New Dashboard Initialization
+        newTip(); 
+        getWeather();
+    });
+  </script>
+</body>
+</html>
