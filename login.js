@@ -19,5 +19,6 @@ async function loginUser() {
   }
 
   alert("✅ Welcome back to KrishiMitra!");
-  window.location.href = "dashboard.html";
+  window.location.href = "index.html";
 }
+
