@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KrishiMitra - Empowering Indian Farmers with AI</title>
+     <link rel="icon" type="image/png" href="logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -302,7 +303,40 @@
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden">
 
-    
+    <aside class="sidebar" id="sidebar">
+      <button class="toggle-btn" id="toggleSidebar">
+       <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="user-info">
+        <i data-feather="user"></i>
+        <span id="userName">Hello, Farmer!</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button onclick="location.href='rogi-scan.html'">
+          <i class="fa-solid fa-virus"></i><span>Rogi Scan</span>
+        </button>
+        <button onclick="location.href='kisan-sathi.html'">
+          <i class="fa-solid fa-comments"></i><span>Kisan Sathi</span>
+        </button>
+        <button onclick="location.href='beej-setu.html'">
+          <i class="fa-solid fa-seedling"></i><span>Beej Setu</span>
+        </button>
+        <button onclick="location.href='anaaj-bazaar.html'">
+          <i class="fa-solid fa-store"></i><span>Anaaj Bazaar</span>
+        </button>
+        <button onclick="location.href='yantra-mitra.html'">
+          <i class="fa-solid fa-tractor"></i><span>Yantra Mitra</span>
+        </button>
+      </nav>
+
+      <button class="logout-btn" id="logoutBtn">
+        <i data-feather="log-out"></i><span>Logout</span>
+      </button>
+    </aside>
+
+    <button class="open-sidebar-btn" id="openSidebarBtn" style="display: none;"><i class="fa-solid fa-bars"></i></button>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 transform" id="navbar">
@@ -425,13 +459,16 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature Cards from Original + Expanded -->
                 <div class="interactive-card feature-card">
+                    <a href="rogi-scan.html" class="block">
                     <div class="card-inner glass rounded-2xl p-8 card-hover border border-farm-green-100">
                         <div class="w-16 h-16 green-gradient rounded-2xl flex items-center justify-center mb-6 shadow-lg feature-icon">
                             <i class="fas fa-search text-2xl text-white"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 font-poppins text-gray-800">Rogi Scan</h3>
                         <p class="text-gray-600 leading-relaxed">Instant crop disease detection using AI-powered image analysis. Get treatment recommendations in seconds.</p>
+                    <div class="mt-4 text-farm-green-600 font-medium hover:text-farm-green-800 transition-colors">Explore Rogi Scan <i class="fas fa-arrow-right ml-2"></i></div>
                     </div>
+                    </a>
                 </div>
                 
                 <div class="interactive-card feature-card">
@@ -859,10 +896,71 @@
                     'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
             });
         });
+
+        // New JS for sidebar, login check, and features enforcement
+        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        async function isLoggedIn() {
+          const { data: { user } } = await supabase.auth.getUser();
+          return !!user;
+        }
+
+        async function initAuth() {
+          const loggedIn = await isLoggedIn();
+          const openSidebarBtn = document.getElementById('openSidebarBtn');
+          const sidebar = document.getElementById('sidebar');
+          const toggleSidebar = document.getElementById('toggleSidebar');
+          const logoutBtn = document.getElementById('logoutBtn');
+
+          if (loggedIn) {
+            // Show sidebar toggle button
+            if (openSidebarBtn) openSidebarBtn.style.display = 'block';
+
+            // Hide login button
+            const loginLink = document.querySelector('a[href="login.html"]');
+            if (loginLink) loginLink.style.display = 'none';
+
+            // Update user name in sidebar
+            const { data: { user } } = await supabase.auth.getUser();
+            const userNameSpan = document.getElementById('userName');
+            if (userNameSpan && user.email) {
+              userNameSpan.innerText = `Hello, ${user.email.split('@')[0]}!`;
+            }
+
+            // Setup sidebar toggle
+            if (openSidebarBtn && sidebar && toggleSidebar) {
+              openSidebarBtn.addEventListener('click', () => {
+                sidebar.classList.add('active');
+              });
+              toggleSidebar.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+              });
+            }
+
+            // Setup logout
+            if (logoutBtn) {
+              logoutBtn.addEventListener('click', async () => {
+                await supabase.auth.signOut();
+                window.location.reload();
+              });
+            }
+          } else {
+            // Enforce login for feature links
+            document.querySelectorAll('.feature-card a').forEach(link => {
+              link.addEventListener('click', async (e) => {
+                const logged = await isLoggedIn();
+                if (!logged) {
+                  e.preventDefault();
+                  window.location.href = 'login.html';
+                }
+              });
+            });
+          }
+        }
+
+        // Run on load
+        window.addEventListener('load', initAuth);
     </script>
     <script src='https://www.noupe.com/embed/0199faada1827522bf0e33d4ea5d7c76153c.js'></script>
 </body>
 </html>
-
-
-
